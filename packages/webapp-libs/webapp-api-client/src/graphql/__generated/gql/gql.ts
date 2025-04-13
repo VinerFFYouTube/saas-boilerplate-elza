@@ -1,4 +1,4 @@
-/* eslint-disable */
+ 
 import * as types from './graphql';
 import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/core';
 
@@ -14,7 +14,7 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  */
 const documents = {
     "\n  query paginationListTestQuery($first: Int, $after: String, $last: Int, $before: String) {\n    allNotifications(first: $first, after: $after, last: $last, before: $before) {\n      edges {\n        node {\n          id\n        }\n      }\n      pageInfo {\n        startCursor\n        endCursor\n        hasPreviousPage\n        hasNextPage\n      }\n    }\n  }\n": types.PaginationListTestQueryDocument,
-    "\n  fragment commonQueryCurrentUserFragment on CurrentUserType {\n    id\n    email\n    firstName\n    lastName\n    roles\n    avatar\n    otpVerified\n    otpEnabled\n  }\n": types.CommonQueryCurrentUserFragmentFragmentDoc,
+    "\n  fragment commonQueryCurrentUserFragment on CurrentUserType {\n    id\n    email\n    firstName\n    lastName\n    roles\n    avatar\n    otpVerified\n    otpEnabled\n    graphics\n  }\n": types.CommonQueryCurrentUserFragmentFragmentDoc,
     "\n  fragment commonQueryTenantItemFragment on TenantType {\n    id\n    name\n    type\n    membership {\n      id\n      role\n      invitationAccepted\n      invitationToken\n    }\n  }\n": types.CommonQueryTenantItemFragmentFragmentDoc,
     "\n  query commonQueryCurrentUserQuery {\n    currentUser {\n      ...commonQueryCurrentUserFragment\n      tenants {\n        ...commonQueryTenantItemFragment\n      }\n    }\n  }\n": types.CommonQueryCurrentUserQueryDocument,
     "\n  query configContentfulAppConfigQuery {\n    appConfigCollection(limit: 1) {\n      items {\n        name\n        privacyPolicy\n        termsAndConditions\n      }\n    }\n  }\n": types.ConfigContentfulAppConfigQueryDocument,
@@ -109,7 +109,7 @@ export function gql(source: "\n  query paginationListTestQuery($first: Int, $aft
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function gql(source: "\n  fragment commonQueryCurrentUserFragment on CurrentUserType {\n    id\n    email\n    firstName\n    lastName\n    roles\n    avatar\n    otpVerified\n    otpEnabled\n  }\n"): (typeof documents)["\n  fragment commonQueryCurrentUserFragment on CurrentUserType {\n    id\n    email\n    firstName\n    lastName\n    roles\n    avatar\n    otpVerified\n    otpEnabled\n  }\n"];
+export function gql(source: "\n  fragment commonQueryCurrentUserFragment on CurrentUserType {\n    id\n    email\n    firstName\n    lastName\n    roles\n    avatar\n    otpVerified\n    otpEnabled\n    graphics\n  }\n"): (typeof documents)["\n  fragment commonQueryCurrentUserFragment on CurrentUserType {\n    id\n    email\n    firstName\n    lastName\n    roles\n    avatar\n    otpVerified\n    otpEnabled\n    graphics\n  }\n"];
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */

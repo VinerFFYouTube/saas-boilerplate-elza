@@ -138,10 +138,11 @@ class CurrentUserType(DjangoObjectType):
     roles = graphene.List(of_type=graphene.String)
     tenants = graphene.List(of_type=TenantType)
     avatar = graphene.String()
+    graphics = graphene.String()
 
     class Meta:
         model = models.User
-        fields = ("id", "email", "first_name", "last_name", "roles", "avatar", "otp_enabled", "otp_verified", "tenants")
+        fields = ("id", "email", "first_name", "last_name", "roles", "avatar", "otp_enabled", "otp_verified", "tenants", "graphics")
 
     @staticmethod
     def resolve_first_name(parent, info):
@@ -166,6 +167,10 @@ class CurrentUserType(DjangoObjectType):
         if not len(tenants):
             Tenant.objects.get_or_create_user_default_tenant(user)
         return tenants
+    
+    @staticmethod
+    def resolve_graphics(parent, info):
+        return get_user_from_resolver(info).profile.graphics
 
 
 class UserProfileType(DjangoObjectType):
@@ -184,7 +189,7 @@ class UpdateCurrentUserMutation(mutations.UpdateModelMutation):
     class Meta:
         serializer_class = serializers.UserProfileSerializer
         edge_class = CurrentUserConnection.Edge
-        only_fields = ("first_name", "last_name", "avatar")
+        only_fields = ("first_name", "last_name", "avatar", "graphics")
         model_operations = ("update",)
 
     @classmethod

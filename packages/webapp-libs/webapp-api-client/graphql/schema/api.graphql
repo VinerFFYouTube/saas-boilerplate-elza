@@ -627,6 +627,7 @@ type CurrentUserType {
   lastName: String
   roles: [String]
   avatar: String
+  graphics: String
 }
 type NotificationConnection {
   "Pagination data for this connection."
@@ -746,6 +747,7 @@ type FileFieldType {
 }
 type ApiMutation {
   updateTenant(input: UpdateTenantMutationInput!): UpdateTenantMutationPayload
+  "Mutation to delete a tenant from the system."
   deleteTenant(input: DeleteTenantMutationInput!): DeleteTenantMutationPayload
   createTenantInvitation(input: CreateTenantInvitationMutationInput!): CreateTenantInvitationMutationPayload
   updateTenantMembership(input: UpdateTenantMembershipMutationInput!): UpdateTenantMembershipMutationPayload
@@ -787,6 +789,7 @@ type UpdateTenantMutationPayload {
   tenantEdge: TenantEdge
   clientMutationId: String
 }
+"Mutation to delete a tenant from the system."
 type DeleteTenantMutationPayload {
   deletedIds: [ID]
   clientMutationId: String
@@ -913,6 +916,7 @@ type UserProfileType implements Node {
   user: CurrentUserType!
   firstName: String!
   lastName: String!
+  graphics: String!
 }
 "A Relay edge containing a `CurrentUser` and its cursor."
 type CurrentUserEdge {
@@ -1018,6 +1022,14 @@ interface Node {
   "The ID of the object"
   id: ID!
 }
+"""
+
+    Predefined tenant user roles:
+    - OWNER
+    - ADMIN
+    - MEMBER
+    
+"""
 enum TenantUserRole {
   OWNER
   ADMIN
@@ -1532,6 +1544,7 @@ input UpdateCurrentUserMutationInput {
   firstName: String
   lastName: String
   avatar: Upload
+  graphics: String
   clientMutationId: String
 }
 input GenerateOTPMutationInput {

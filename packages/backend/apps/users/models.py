@@ -99,6 +99,7 @@ class UserProfile(models.Model):
     avatar = models.OneToOneField(
         UserAvatar, on_delete=models.SET_NULL, null=True, blank=True, related_name="user_profile"
     )
+    graphics = models.CharField(max_length=1000, blank=True, default='')
 
     def __str__(self) -> str:
         full_name = f"{self.first_name} {self.last_name}".strip()
