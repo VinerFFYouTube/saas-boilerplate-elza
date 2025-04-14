@@ -45,5 +45,14 @@ export const useEditProfileForm = () => {
     });
   });
 
-  return { ...form, loading, handleUpdate };
+  const updateGraphics = handleSubmit(() => {
+    const {graphics} = form.form.getValues()
+    commitUpdateUserMutation({
+      variables: {
+        input: {graphics},
+      }
+    })
+  })
+
+  return { ...form, loading, handleUpdate, updateGraphics };
 };

@@ -9,8 +9,36 @@ import { EditProfileForm } from '../../shared/components/auth/editProfileForm';
 import { TwoFactorAuthForm } from '../../shared/components/auth/twoFactorAuthForm';
 import { useAuth } from '../../shared/hooks';
 
+import { Line } from 'react-chartjs-2';
+import {
+  Chart as ChartJS,
+  LineElement,
+  PointElement,
+  LinearScale,
+  CategoryScale,
+} from 'chart.js';
+
+ChartJS.register(LineElement, PointElement, LinearScale, CategoryScale);
+
+
 export const Profile = () => {
   const { currentUser } = useAuth();
+
+  const graphicsString = currentUser?.graphics ?? '{}';
+  const parsedGraphics = JSON.parse(graphicsString);
+
+  const chartData = {
+    labels: Object.keys(parsedGraphics),
+    datasets: [
+      {
+        label: 'Chart Data',
+        data: Object.values(parsedGraphics),
+        borderColor: 'rgb(75, 192, 192)',
+        tension: 0.1,
+      },
+    ],
+  };
+
 
   return (
     <PageLayout>
@@ -67,6 +95,9 @@ export const Profile = () => {
           }
         />
         <EditProfileForm />
+        <div>
+          <Line data={chartData} />
+        </div>
       </div>
 
       <div className="flex w-full flex-col gap-y-6">

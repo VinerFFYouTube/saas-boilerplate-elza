@@ -19,6 +19,7 @@ export const EditProfileForm = () => {
     hasGenericErrorOnly,
     loading,
     handleUpdate,
+    updateGraphics,
   } = useEditProfileForm();
 
   return (
@@ -70,6 +71,42 @@ export const EditProfileForm = () => {
           <FormattedMessage defaultMessage="Update personal data" id="Auth / Update profile/ Submit button" />
         </Button>
       </form>
+
+      <div>
+        <form
+          noValidate
+          onSubmit={updateGraphics}
+          className={cn('flex max-w-xs flex-row flex-wrap items-end justify-center gap-4 md:max-w-full md:justify-start')}
+        >
+          <Input
+            type="text"
+            {...register('graphics', {
+              min: {
+                value: 1,
+                message: intl.formatMessage({
+                  defaultMessage: 'graphics',
+                  id: 'Auth / Update profile/ Age min error',
+                }),
+              },
+              max: {
+                value: 1200,
+                message: intl.formatMessage({
+                  defaultMessage: 'Graphics must be less than 1200',
+                  id: 'Auth / Update profile/ Age max error',
+                }),
+              },
+            })}
+            label={intl.formatMessage({
+              defaultMessage: 'graphics',
+              id: 'Auth / Update graphics / Graphics label',
+            })}
+            error={errors.graphics?.message}
+          />
+        <Button type="submit" disabled={loading} className="w-full md:w-fit">
+          <FormattedMessage defaultMessage="update graphics" id="Auth / Update profile/ Submit button" />
+        </Button>
+        </form>
+      </div>
     </div>
   );
 };
