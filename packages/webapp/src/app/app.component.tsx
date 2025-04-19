@@ -35,6 +35,7 @@ import { AnonymousRoute, AuthRoute } from '../shared/components/routes';
 import { ConfirmEmail, Home, Login, Logout, NotFound, Profile, Signup } from './asyncComponents';
 import { LANG_PREFIX, RoutesConfig, TENANT_PREFIX } from './config/routes';
 import { ValidRoutesProviders } from './providers';
+import { MainPage } from '../routes/mainPage/mainPage.comoponent';
 
 export const App = () => {
   const { pathname, search } = useLocation();
@@ -49,6 +50,7 @@ export const App = () => {
             <Route path={RoutesConfig.signup} element={<Signup />} />
             <Route path={RoutesConfig.login} element={<Login />} />
             <Route path={RoutesConfig.validateOtp} element={<ValidateOtp />} />
+            <Route path={RoutesConfig.mainPage} element={<MainPage/>}/>
             <Route path="*" element={<NotFound />} />
           </Route>
 

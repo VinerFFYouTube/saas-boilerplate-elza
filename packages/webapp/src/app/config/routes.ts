@@ -18,6 +18,7 @@ export const RoutesConfig = {
   ...CrudDemoRoutesConfig,
   ...FinancesRoutesConfig,
   //<-- INJECT ROUTE DEFINITION -->
+  mainPage: 'main-page'
 };
 
 export const NO_NAVIGATION_ROUTES = [

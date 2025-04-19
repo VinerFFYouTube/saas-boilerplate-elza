@@ -24,20 +24,37 @@ ChartJS.register(LineElement, PointElement, LinearScale, CategoryScale);
 export const Profile = () => {
   const { currentUser } = useAuth();
 
-  const graphicsString = currentUser?.graphics ?? '{}';
-  const parsedGraphics = JSON.parse(graphicsString);
+  let chartData = null;
+  try {
+    const graphicsString = currentUser?.graphics ?? '{}';
+    const parsedGraphics = JSON.parse(graphicsString);
 
-  const chartData = {
-    labels: Object.keys(parsedGraphics),
-    datasets: [
-      {
-        label: 'Chart Data',
-        data: Object.values(parsedGraphics),
-        borderColor: 'rgb(75, 192, 192)',
-        tension: 0.1,
-      },
-    ],
-  };
+    chartData = {
+      labels: Object.keys(parsedGraphics),
+      datasets: [
+        {
+          label: 'Chart Data',
+          data: Object.values(parsedGraphics),
+          borderColor: 'rgb(75, 192, 192)',
+          tension: 0.1,
+        },
+      ],
+    };
+  } catch (error) {
+    console.error('Failed to parse graphics data:', error);
+    // Fallback данные для графика
+    chartData = {
+      labels: [],
+      datasets: [
+        {
+          label: 'Chart Data',
+          data: [],
+          borderColor: 'rgb(75, 192, 192)',
+          tension: 0.1,
+        },
+      ],
+    };
+  }
 
 
   return (
@@ -96,7 +113,8 @@ export const Profile = () => {
         />
         <EditProfileForm />
         <div>
-          <Line data={chartData} />
+          {/* <Line data={chartData} /> */}
+          {chartData && <Line data={chartData} />}
         </div>
       </div>
 
