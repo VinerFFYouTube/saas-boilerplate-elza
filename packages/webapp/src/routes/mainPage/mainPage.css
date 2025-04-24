@@ -4,7 +4,7 @@
   --primary-dark: #3a56d4;
   --text-color: #8a8ca7;
   --text-light: #8d99ae;
-  --bg-gray: #cdcdcd;
+  --bg-gray: #e6e4e4;
   --white: #ffffff;
   --transition: all 0.3s ease;
   
@@ -551,6 +551,17 @@
 /* Показываем поле API ключа при выборе чекбокса */
 .private-checkbox:checked ~ #api-key-group {
     display: flex;
+}
+
+/* form */
+.section-form {
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.6) 20%,
+    rgba(0, 0, 0, 0.4) 30%,
+    rgba(0, 0, 0, 0.2) 40%
+  );
 }
 
 /* Footer */

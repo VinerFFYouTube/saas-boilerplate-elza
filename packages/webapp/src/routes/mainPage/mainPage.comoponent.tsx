@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 // import { FaBars, FaTimes, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import './mainPage.css';
-import Login from '../auth/login';
+import Signup from '../auth/signup';
 
 export const MainPage = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -181,8 +181,9 @@ export const MainPage = () => {
             </section>
 
             {/* form */}
-            <section className='section section-gray'>
-                <Login />
+            <section className='section section-form'>
+                
+                <Signup />
             </section>
 
             {/* Footer */}
