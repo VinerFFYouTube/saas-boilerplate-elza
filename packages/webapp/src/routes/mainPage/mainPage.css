@@ -147,7 +147,7 @@
 /* Buttons */
 .btn {
   display: inline-block;
-  padding: 12px 24px;
+  /* padding: 12px 24px; */
   border-radius: 8px;
   font-weight: 600;
   text-align: center;

@@ -2,6 +2,11 @@ import { useState, useEffect } from 'react';
 // import { FaBars, FaTimes, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import './mainPage.css';
 import Signup from '../auth/signup';
+import { Button } from '@sb/webapp-core/components/buttons';
+import { Link } from 'react-router-dom';
+import { Paragraph } from '@sb/webapp-core/components/typography';
+import { FormattedMessage } from 'react-intl';
+import { PageHeadline } from '@sb/webapp-core/components/pageHeadline';
 
 export const MainPage = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,29 +30,29 @@ export const MainPage = () => {
             {/* Header */}
             <header className={`header-main-page ${isScrolled ? 'scrolled' : ''}`}>
                 <div className="container-main-page header-children">
-                    <a href="#" className="logo">Discourse<span>Analytics</span></a>
+                    <Link to="/main-page" className="logo">Discourse<span>Analytics</span></Link>
 
                     <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
                         <a href="#how-it-works" onClick={() => setIsMenuOpen(false)}>How It Works</a>
                         <a href="#metrics" onClick={() => setIsMenuOpen(false)}>Metrics</a>
                         <a href="#reports" onClick={() => setIsMenuOpen(false)}>Reports</a>
                         <a href="#faq" onClick={() => setIsMenuOpen(false)}>FAQ</a>
-                        <button className="btn btn-outline mobile-nav-btn" onClick={() => setIsMenuOpen(false)}>Get Started</button>
+                        <Button className="btn btn-outline mobile-nav-btn" onClick={() => setIsMenuOpen(false)}>Get Started</Button>
                     </nav>
 
-                    <button
+                    <Button
                         className="mobile-menu-btn"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         aria-label="Toggle menu"
                     >
                         {isMenuOpen ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M6 6l12 12M6 18L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <path d="M6 6l12 12M6 18L18 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                         </svg>
                             :
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+                                <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>
                         }
-                    </button>
+                    </Button>
                 </div>
             </header>
 
@@ -55,11 +60,20 @@ export const MainPage = () => {
             <section className="hero section-gray">
                 <div className="container">
                     <div className="hero-content">
-                        <h1>Measure, Improve, and Grow Your Discourse Community</h1>
-                        <p>Leverage the power of data to increase engagement, boost retention, and drive sustainable growth for your Discourse community.</p>
+                        <PageHeadline
+                            header={
+                                <FormattedMessage defaultMessage="Measure, Improve, and Grow Your Discourse Community" id="Auth / Profile details / Personal data header" />
+                            }
+                            subheader={
+                                <FormattedMessage
+                                    defaultMessage="Leverage the power of data to increase engagement, boost retention, and drive sustainable growth for your Discourse community."
+                                    id="Auth / Profile details / Personal data label"
+                                />
+                            }
+                        />
                         <div className="hero-buttons">
-                            <button className="btn btn-primary">Start Your Free Trial</button>
-                            <button className="btn btn-outline">See Demo</button>
+                            <Button className="btn btn-primary">Start Your Free Trial</Button>
+                            <Button className="btn btn-outline">See Demo</Button>
                         </div>
                     </div>
                     <img
@@ -74,35 +88,85 @@ export const MainPage = () => {
             <section className="section" id="how-it-works">
                 <div className="container">
                     <div className="section-title">
-                        <h2>How It Works</h2>
-                        <p>Get actionable insights for your community in just 3 simple steps</p>
+                        {/* <h2>How It Works</h2>
+                        <p>Get actionable insights for your community in just 3 simple steps</p> */}
+                        <PageHeadline
+                            header={
+                                <FormattedMessage
+                                    defaultMessage="How It Works"
+                                    id='Auth / Profile details / Personal data header'
+                                />
+                            }
+                            subheader={
+                                <FormattedMessage
+                                    defaultMessage="Get actionable insights for your community in just 3 simple steps"
+                                    id='Auth / Profile details / Personal data label'
+                                />
+                            }
+                        />
                     </div>
 
                     <div className="steps-grid">
                         <div className="step-card">
                             <div className="step-number">1</div>
-                            <h3>Integrate your community seamlessly</h3>
-                            <p>Integrate your community with one-click to start tracking performance.</p>
+                            <PageHeadline
+                                header={
+                                    <FormattedMessage
+                                        defaultMessage="Integrate your community seamlessly"
+                                        id='Auth / Profile details / Personal data header'
+                                    />
+                                }
+                                subheader={
+                                    <FormattedMessage
+                                        defaultMessage="Integrate your community with one-click to start tracking performance."
+                                        id='Auth / Profile details / Personal data label'
+                                    />
+                                }
+                            />
                             <div className="step-icon">🔌</div>
                         </div>
 
                         <div className="step-card">
                             <div className="step-number">2</div>
-                            <h3>Receive Automated Monthly Analytics Reports</h3>
-                            <p>Get customized, data-driven reports each month with insights on engagement and performance.</p>
+                            <PageHeadline
+                                header={
+                                    <FormattedMessage
+                                        defaultMessage="Receive Automated Monthly Analytics Reports"
+                                        id='Auth / Profile details / Personal data header'
+                                    />
+                                }
+                                subheader={
+                                    <FormattedMessage
+                                        defaultMessage="Get customized, data-driven reports each month with insights on engagement and performance."
+                                        id='Auth / Profile details / Personal data label'
+                                    />
+                                }
+                            />
                             <div className="step-icon">📊</div>
                         </div>
 
                         <div className="step-card">
                             <div className="step-number">3</div>
-                            <h3>Actionable Insights for Growth</h3>
-                            <p>Leverage the data to make informed decisions and achieve sustainable growth.</p>
+                            <PageHeadline
+                                header={
+                                    <FormattedMessage
+                                        defaultMessage="Actionable Insights for Growth"
+                                        id='Auth / Profile details / Personal data header'
+                                    />
+                                }
+                                subheader={
+                                    <FormattedMessage
+                                        defaultMessage="Leverage the data to make informed decisions and achieve sustainable growth"
+                                        id='Auth / Profile details / Personal data label'
+                                    />
+                                }
+                            />
                             <div className="step-icon">🚀</div>
                         </div>
                     </div>
 
                     <div className="section-cta">
-                        <button className="btn btn-primary">Start Analyzing Your Community</button>
+                        <Button className="btn btn-primary">Start Analyzing Your Community</Button>
                     </div>
                 </div>
             </section>
@@ -111,42 +175,102 @@ export const MainPage = () => {
             <section className="section section-gray" id="metrics">
                 <div className="container">
                     <div className="section-title">
-                        <h2>Improve Your Community With Comprehensive Metrics</h2>
-                        <p>Track what matters most with metrics that cover all aspects of your community's health and performance.</p>
+                        <PageHeadline
+                            header={
+                                <FormattedMessage
+                                    defaultMessage="Improve Your Community With Comprehensive Metrics"
+                                    id='Auth / Profile details / Personal data header'
+                                />
+                            }
+                            subheader={
+                                <FormattedMessage
+                                    defaultMessage="Track what matters most with metrics that cover all aspects of your community's health and performance."
+                                    id='Auth / Profile details / Personal data label'
+                                />
+                            }
+                        />
                     </div>
 
                     <div className="metrics-grid">
                         <a href="/onboard/metrics?type=engagement" className="metric-card">
                             <div className="metric-icon">👥</div>
-                            <h3>Engagement Rate</h3>
-                            <p>Measure how actively your members participate in discussions.</p>
+                            <PageHeadline
+                                header={
+                                    <FormattedMessage
+                                        defaultMessage="Engagement Rate"
+                                        id='Auth / Profile details / Personal data header'
+                                    />
+                                }
+                                subheader={
+                                    <FormattedMessage
+                                        defaultMessage="Measure how actively your members participate in discussions."
+                                        id='Auth / Profile details / Personal data label'
+                                    />
+                                }
+                            />
                             <span className="metric-link">Learn more →</span>
                         </a>
 
                         <a href="/onboard/metrics?type=retention" className="metric-card">
                             <div className="metric-icon">📈</div>
-                            <h3>User Retention</h3>
-                            <p>Track how many members return to your community over time.</p>
+                            <PageHeadline
+                                header={
+                                    <FormattedMessage
+                                        defaultMessage="User Retention"
+                                        id='Auth / Profile details / Personal data header'
+                                    />
+                                }
+                                subheader={
+                                    <FormattedMessage
+                                        defaultMessage="Track how many members return to your community over time."
+                                        id='Auth / Profile details / Personal data label'
+                                    />
+                                }
+                            />
                             <span className="metric-link">Learn more →</span>
                         </a>
 
                         <a href="/onboard/metrics?type=growth" className="metric-card">
                             <div className="metric-icon">🌱</div>
-                            <h3>Growth Rate</h3>
-                            <p>Monitor how quickly your community is expanding.</p>
+                            <PageHeadline
+                                header={
+                                    <FormattedMessage
+                                        defaultMessage="Growth Rate"
+                                        id='Auth / Profile details / Personal data header'
+                                    />
+                                }
+                                subheader={
+                                    <FormattedMessage
+                                        defaultMessage="Monitor how quickly your community is expanding."
+                                        id='Auth / Profile details / Personal data label'
+                                    />
+                                }
+                            />
                             <span className="metric-link">Learn more →</span>
                         </a>
 
                         <a href="/onboard/metrics?type=activity" className="metric-card">
                             <div className="metric-icon">🔥</div>
-                            <h3>Activity Level</h3>
-                            <p>See the overall participation trends in your community.</p>
+                            <PageHeadline
+                                header={
+                                    <FormattedMessage
+                                        defaultMessage="Activity Level"
+                                        id='Auth / Profile details / Personal data header'
+                                    />
+                                }
+                                subheader={
+                                    <FormattedMessage
+                                        defaultMessage="See the overall participation trends in your community."
+                                        id='Auth / Profile details / Personal data label'
+                                    />
+                                }
+                            />
                             <span className="metric-link">Learn more →</span>
                         </a>
                     </div>
 
                     <div className="section-cta">
-                        <button className="btn btn-primary">Start Measuring Your Community</button>
+                        <Button className="btn btn-primary">Start Measuring Your Community</Button>
                     </div>
                 </div>
             </section>
@@ -182,7 +306,7 @@ export const MainPage = () => {
 
             {/* form */}
             <section className='section section-form'>
-                
+
                 <Signup />
             </section>
 
