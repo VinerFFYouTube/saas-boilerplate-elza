@@ -4,9 +4,9 @@ import './mainPage.css';
 import Signup from '../auth/signup';
 import { Button } from '@sb/webapp-core/components/buttons';
 import { Link } from 'react-router-dom';
-import { Paragraph } from '@sb/webapp-core/components/typography';
 import { FormattedMessage } from 'react-intl';
 import { PageHeadline } from '@sb/webapp-core/components/pageHeadline';
+import { Card, CardContent, CardHeader, CardTitle } from '@sb/webapp-core/components/cards';
 
 export const MainPage = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -106,63 +106,64 @@ export const MainPage = () => {
                         />
                     </div>
 
+
                     <div className="steps-grid">
-                        <div className="step-card">
-                            <div className="step-number">1</div>
-                            <PageHeadline
-                                header={
+                        <Card className='step-card'>
+                            <CardHeader>
+                                <div className="step-number">1</div>
+                                <CardTitle>
                                     <FormattedMessage
-                                        defaultMessage="Integrate your community seamlessly"
-                                        id='Auth / Profile details / Personal data header'
+                                        defaultMessage='Integrate your community seamlessly'
+                                        id='integration.header'
                                     />
-                                }
-                                subheader={
-                                    <FormattedMessage
-                                        defaultMessage="Integrate your community with one-click to start tracking performance."
-                                        id='Auth / Profile details / Personal data label'
-                                    />
-                                }
-                            />
-                            <div className="step-icon">🔌</div>
-                        </div>
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <FormattedMessage
+                                    defaultMessage="Integrate your community with one-click to start tracking performance."
+                                    id="integration.subheader"
+                                />
+                                <div className="step-icon">🔌</div>
+                            </CardContent>
+                        </Card>
 
-                        <div className="step-card">
-                            <div className="step-number">2</div>
-                            <PageHeadline
-                                header={
+                        <Card className='step-card'>
+                            <CardHeader>
+                                <div className="step-number">2</div>
+                                <CardTitle>
                                     <FormattedMessage
-                                        defaultMessage="Receive Automated Monthly Analytics Reports"
-                                        id='Auth / Profile details / Personal data header'
+                                        defaultMessage='Receive Automated Monthly Analytics Reports'
+                                        id='integration.header'
                                     />
-                                }
-                                subheader={
-                                    <FormattedMessage
-                                        defaultMessage="Get customized, data-driven reports each month with insights on engagement and performance."
-                                        id='Auth / Profile details / Personal data label'
-                                    />
-                                }
-                            />
-                            <div className="step-icon">📊</div>
-                        </div>
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <FormattedMessage
+                                    defaultMessage="Get customized, data-driven reports each month with insights on engagement and performance."
+                                    id="integration.subheader"
+                                />
+                                <div className="step-icon">📊</div>
+                            </CardContent>
+                        </Card>
 
-                        <div className="step-card">
-                            <div className="step-number">3</div>
-                            <PageHeadline
-                                header={
+                        <Card className='step-card'>
+                            <CardHeader>
+                                <div className="step-number">3</div>
+                                <CardTitle>
                                     <FormattedMessage
-                                        defaultMessage="Actionable Insights for Growth"
-                                        id='Auth / Profile details / Personal data header'
+                                        defaultMessage='Actionable Insights for Growth'
+                                        id='integration.header'
                                     />
-                                }
-                                subheader={
-                                    <FormattedMessage
-                                        defaultMessage="Leverage the data to make informed decisions and achieve sustainable growth"
-                                        id='Auth / Profile details / Personal data label'
-                                    />
-                                }
-                            />
-                            <div className="step-icon">🚀</div>
-                        </div>
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <FormattedMessage
+                                    defaultMessage="Leverage the data to make informed decisions and achieve sustainable growth."
+                                    id="integration.subheader"
+                                />
+                                <div className="step-icon">🚀</div>
+                            </CardContent>
+                        </Card>
                     </div>
 
                     <div className="section-cta">
