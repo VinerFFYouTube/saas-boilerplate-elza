@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 // import { FaBars, FaTimes, FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { Plug, BarChart2Icon, RocketIcon, BarChart2, Rocket, UsersIcon, SproutIcon, FireExtinguisherIcon, FireExtinguisher, FlameIcon } from 'lucide-react'
 import './mainPage.css';
 import Signup from '../auth/signup';
 import { Button } from '@sb/webapp-core/components/buttons';
@@ -77,7 +78,7 @@ export const MainPage = () => {
                         </div>
                     </div>
                     <img
-                        src="https://via.placeholder.com/800x400?text=Metric+Segmented+Distribution"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcA5h3CaalR-OLgFQFrpO90jY56fdnsMqUSg&s"
                         alt="Community Analytics Dashboard"
                         className="hero-image"
                     />
@@ -85,11 +86,9 @@ export const MainPage = () => {
             </section>
 
             {/* How It Works */}
-            <section className="section" id="how-it-works">
-                <div className="container">
-                    <div className="section-title">
-                        {/* <h2>How It Works</h2>
-                        <p>Get actionable insights for your community in just 3 simple steps</p> */}
+            <section className="py-16 bg-gray-50" id="how-it-works">
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-12">
                         <PageHeadline
                             header={
                                 <FormattedMessage
@@ -106,12 +105,14 @@ export const MainPage = () => {
                         />
                     </div>
 
-
-                    <div className="steps-grid">
-                        <Card className='step-card'>
-                            <CardHeader>
-                                <div className="step-number">1</div>
-                                <CardTitle>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                        {/* Step 1 */}
+                        <Card className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow border-0">
+                            <CardHeader className="flex items-start mb-4">
+                                <div className="flex-shrink-0 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full w-8 h-8 text-sm font-medium mr-3">
+                                    1
+                                </div>
+                                <CardTitle className="text-lg font-semibold text-gray-400">
                                     <FormattedMessage
                                         defaultMessage='Integrate your community seamlessly'
                                         id='integration.header'
@@ -119,18 +120,26 @@ export const MainPage = () => {
                                 </CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <FormattedMessage
-                                    defaultMessage="Integrate your community with one-click to start tracking performance."
-                                    id="integration.subheader"
-                                />
-                                <div className="step-icon">🔌</div>
+                                <p className="text-gray-600 mb-4">
+                                    <FormattedMessage
+                                        defaultMessage="Integrate your community with one-click to start tracking performance."
+                                        id="integration.subheader"
+                                    />
+                                </p>
+                                <div className="text-blue-500 mt-4">
+                                    <Plug className="w-6 h-6" />
+                                </div>
+
                             </CardContent>
                         </Card>
 
-                        <Card className='step-card'>
-                            <CardHeader>
-                                <div className="step-number">2</div>
-                                <CardTitle>
+                        {/* Step 2 */}
+                        <Card className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow border-0">
+                            <CardHeader className="flex items-start mb-4">
+                                <div className="flex-shrink-0 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full w-8 h-8 text-sm font-medium mr-3">
+                                    2
+                                </div>
+                                <CardTitle className="text-lg font-semibold text-gray-400">
                                     <FormattedMessage
                                         defaultMessage='Receive Automated Monthly Analytics Reports'
                                         id='integration.header'
@@ -138,18 +147,25 @@ export const MainPage = () => {
                                 </CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <FormattedMessage
-                                    defaultMessage="Get customized, data-driven reports each month with insights on engagement and performance."
-                                    id="integration.subheader"
-                                />
-                                <div className="step-icon">📊</div>
+                                <p className="text-gray-600 mb-4">
+                                    <FormattedMessage
+                                        defaultMessage="Get customized, data-driven reports each month with insights on engagement and performance."
+                                        id="integration.subheader"
+                                    />
+                                </p>
+                                <div className="text-blue-500 mt-4">
+                                    <BarChart2 className="w-6 h-6" />
+                                </div>
                             </CardContent>
                         </Card>
 
-                        <Card className='step-card'>
-                            <CardHeader>
-                                <div className="step-number">3</div>
-                                <CardTitle>
+                        {/* Step 3 */}
+                        <Card className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow border-0">
+                            <CardHeader className="flex items-start mb-4">
+                                <div className="flex-shrink-0 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full w-8 h-8 text-sm font-medium mr-3">
+                                    3
+                                </div>
+                                <CardTitle className="text-lg font-semibold text-gray-400">
                                     <FormattedMessage
                                         defaultMessage='Actionable Insights for Growth'
                                         id='integration.header'
@@ -157,20 +173,31 @@ export const MainPage = () => {
                                 </CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <FormattedMessage
-                                    defaultMessage="Leverage the data to make informed decisions and achieve sustainable growth."
-                                    id="integration.subheader"
-                                />
-                                <div className="step-icon">🚀</div>
+                                <p className="text-gray-600 mb-4">
+                                    <FormattedMessage
+                                        defaultMessage="Leverage the data to make informed decisions and achieve sustainable growth."
+                                        id="integration.subheader"
+                                    />
+                                </p>
+                                <div className="text-blue-500 mt-4">
+                                    <Rocket className="w-6 h-6" />
+                                </div>
                             </CardContent>
+
                         </Card>
                     </div>
 
-                    <div className="section-cta">
-                        <Button className="btn btn-primary">Start Analyzing Your Community</Button>
+                    <div className="text-center">
+                        <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition-colors">
+                            <FormattedMessage
+                                defaultMessage="Start Analyzing Your Community"
+                                id="howItWorks.cta"
+                            />
+                        </button>
                     </div>
                 </div>
             </section>
+
 
             {/* Metrics Section */}
             <section className="section section-gray" id="metrics">
@@ -192,82 +219,86 @@ export const MainPage = () => {
                         />
                     </div>
 
-                    <div className="metrics-grid">
-                        <a href="/onboard/metrics?type=engagement" className="metric-card">
-                            <div className="metric-icon">👥</div>
-                            <PageHeadline
-                                header={
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <Card className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 hover:border-blue-100">
+                            <CardHeader  className="flex flex-col items-center text-center p-6 pb-0">
+                                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-50 text-blue-600 mb-4">
+                                    <UsersIcon />
+                                </div>
+                                <CardTitle className="text-lg font-semibold text-gray-900">
                                     <FormattedMessage
-                                        defaultMessage="Engagement Rate"
-                                        id='Auth / Profile details / Personal data header'
+                                        defaultMessage='Engagement Rate'
+                                        id='integration.header'
                                     />
-                                }
-                                subheader={
-                                    <FormattedMessage
-                                        defaultMessage="Measure how actively your members participate in discussions."
-                                        id='Auth / Profile details / Personal data label'
-                                    />
-                                }
-                            />
-                            <span className="metric-link">Learn more →</span>
-                        </a>
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent className="p-6 pt-0 text-center text-gray-600">
+                                <FormattedMessage
+                                    defaultMessage='Measure how actively your members participate in discussions.'
+                                    id='integration.header'
+                                />
+                            </CardContent>
+                        </Card>
 
-                        <a href="/onboard/metrics?type=retention" className="metric-card">
-                            <div className="metric-icon">📈</div>
-                            <PageHeadline
-                                header={
+                        <Card className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 hover:border-blue-100">
+                            <CardHeader className="flex flex-col items-center text-center p-6 pb-0">
+                                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-50 text-blue-600 mb-4">
+                                    <BarChart2Icon />
+                                </div>
+                                <CardTitle className="text-lg font-semibold text-gray-900">
                                     <FormattedMessage
-                                        defaultMessage="User Retention"
-                                        id='Auth / Profile details / Personal data header'
+                                        defaultMessage='User Retention'
+                                        id='integration.header'
                                     />
-                                }
-                                subheader={
-                                    <FormattedMessage
-                                        defaultMessage="Track how many members return to your community over time."
-                                        id='Auth / Profile details / Personal data label'
-                                    />
-                                }
-                            />
-                            <span className="metric-link">Learn more →</span>
-                        </a>
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent className="p-6 pt-0 text-center text-gray-600">
+                                <FormattedMessage
+                                    defaultMessage='Track how many members return to your community over time.'
+                                    id='integration.header'
+                                />
+                            </CardContent>
+                        </Card>
 
-                        <a href="/onboard/metrics?type=growth" className="metric-card">
-                            <div className="metric-icon">🌱</div>
-                            <PageHeadline
-                                header={
+                        <Card className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 hover:border-blue-100">
+                            <CardHeader className="flex flex-col items-center text-center p-6 pb-0">
+                                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-50 text-blue-600 mb-4">
+                                    <SproutIcon />
+                                </div>
+                                <CardTitle className="text-lg font-semibold text-gray-900">
                                     <FormattedMessage
-                                        defaultMessage="Growth Rate"
-                                        id='Auth / Profile details / Personal data header'
+                                        defaultMessage='Growth Rate'
+                                        id='integration.header'
                                     />
-                                }
-                                subheader={
-                                    <FormattedMessage
-                                        defaultMessage="Monitor how quickly your community is expanding."
-                                        id='Auth / Profile details / Personal data label'
-                                    />
-                                }
-                            />
-                            <span className="metric-link">Learn more →</span>
-                        </a>
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent className="p-6 pt-0 text-center text-gray-600">
+                                <FormattedMessage
+                                    defaultMessage='Monitor how quickly your community is expanding.'
+                                    id='integration.header'
+                                />
+                            </CardContent>
+                        </Card>
 
-                        <a href="/onboard/metrics?type=activity" className="metric-card">
-                            <div className="metric-icon">🔥</div>
-                            <PageHeadline
-                                header={
+                        <Card className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 hover:border-blue-100">
+                            <CardHeader className="flex flex-col items-center text-center p-6 pb-0">
+                                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-50 text-blue-600 mb-4">
+                                    <FlameIcon />
+                                </div>
+                                <CardTitle className="text-lg font-semibold text-gray-900">
                                     <FormattedMessage
-                                        defaultMessage="Activity Level"
-                                        id='Auth / Profile details / Personal data header'
+                                        defaultMessage='Activity Level'
+                                        id='integration.header'
                                     />
-                                }
-                                subheader={
-                                    <FormattedMessage
-                                        defaultMessage="See the overall participation trends in your community."
-                                        id='Auth / Profile details / Personal data label'
-                                    />
-                                }
-                            />
-                            <span className="metric-link">Learn more →</span>
-                        </a>
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent className="p-6 pt-0 text-center text-gray-600">
+                                <FormattedMessage
+                                    defaultMessage='See the overall participation trends in your community.'
+                                    id='integration.header'
+                                />
+                            </CardContent>
+                        </Card>
                     </div>
 
                     <div className="section-cta">
