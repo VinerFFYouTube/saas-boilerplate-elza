@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-// import { FaBars, FaTimes, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { Plug, BarChart2Icon, RocketIcon, BarChart2, Rocket, UsersIcon, SproutIcon, FireExtinguisherIcon, FireExtinguisher, FlameIcon } from 'lucide-react'
 import './mainPage.css';
 import Signup from '../auth/signup';
@@ -8,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 import { PageHeadline } from '@sb/webapp-core/components/pageHeadline';
 import { Card, CardContent, CardHeader, CardTitle } from '@sb/webapp-core/components/cards';
+import { H2, H4, Paragraph } from '@sb/webapp-core/components/typography';
 
 export const MainPage = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,9 +36,10 @@ export const MainPage = () => {
                     <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
                         <a href="#how-it-works" onClick={() => setIsMenuOpen(false)}>How It Works</a>
                         <a href="#metrics" onClick={() => setIsMenuOpen(false)}>Metrics</a>
-                        <a href="#reports" onClick={() => setIsMenuOpen(false)}>Reports</a>
                         <a href="#faq" onClick={() => setIsMenuOpen(false)}>FAQ</a>
-                        <Button className="btn btn-outline mobile-nav-btn" onClick={() => setIsMenuOpen(false)}>Get Started</Button>
+                        <a href="#form-signup">
+                            <Button className="btn btn-outline mobile-nav-btn" onClick={() => setIsMenuOpen(false)}>Get Started</Button>
+                        </a>
                     </nav>
 
                     <Button
@@ -73,7 +74,9 @@ export const MainPage = () => {
                             }
                         />
                         <div className="hero-buttons">
-                            <Button className="btn btn-primary">Start Your Free Trial</Button>
+                            <a href="#form-signup">
+                                <Button className="btn btn-primary">Start Your Free Trial</Button>
+                            </a>
                             <Button className="btn btn-outline">See Demo</Button>
                         </div>
                     </div>
@@ -120,12 +123,9 @@ export const MainPage = () => {
                                 </CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-gray-600 mb-4">
-                                    <FormattedMessage
-                                        defaultMessage="Integrate your community with one-click to start tracking performance."
-                                        id="integration.subheader"
-                                    />
-                                </p>
+                                <Paragraph className="text-gray-600 mb-4">
+                                    Integrate your community with one-click to start tracking performance.
+                                </Paragraph>
                                 <div className="text-blue-500 mt-4">
                                     <Plug className="w-6 h-6" />
                                 </div>
@@ -147,12 +147,9 @@ export const MainPage = () => {
                                 </CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-gray-600 mb-4">
-                                    <FormattedMessage
-                                        defaultMessage="Get customized, data-driven reports each month with insights on engagement and performance."
-                                        id="integration.subheader"
-                                    />
-                                </p>
+                                <Paragraph className="text-gray-600 mb-4">
+                                    Get customized, data-driven reports each month with insights on engagement and performance.
+                                </Paragraph>
                                 <div className="text-blue-500 mt-4">
                                     <BarChart2 className="w-6 h-6" />
                                 </div>
@@ -173,12 +170,9 @@ export const MainPage = () => {
                                 </CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-gray-600 mb-4">
-                                    <FormattedMessage
-                                        defaultMessage="Leverage the data to make informed decisions and achieve sustainable growth."
-                                        id="integration.subheader"
-                                    />
-                                </p>
+                                <Paragraph className="text-gray-600 mb-4">
+                                    Leverage the data to make informed decisions and achieve sustainable growth.
+                                </Paragraph>
                                 <div className="text-blue-500 mt-4">
                                     <Rocket className="w-6 h-6" />
                                 </div>
@@ -188,12 +182,14 @@ export const MainPage = () => {
                     </div>
 
                     <div className="text-center">
-                        <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition-colors">
-                            <FormattedMessage
-                                defaultMessage="Start Analyzing Your Community"
-                                id="howItWorks.cta"
-                            />
-                        </button>
+                        <a href="#form-signup">
+                            <Button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition-colors">
+                                <FormattedMessage
+                                    defaultMessage="Start Analyzing Your Community"
+                                    id="howItWorks.cta"
+                                />
+                            </Button>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -221,7 +217,7 @@ export const MainPage = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <Card className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 hover:border-blue-100">
-                            <CardHeader  className="flex flex-col items-center text-center p-6 pb-0">
+                            <CardHeader className="flex flex-col items-center text-center p-6 pb-0">
                                 <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-50 text-blue-600 mb-4">
                                     <UsersIcon />
                                 </div>
@@ -302,7 +298,9 @@ export const MainPage = () => {
                     </div>
 
                     <div className="section-cta">
-                        <Button className="btn btn-primary">Start Measuring Your Community</Button>
+                        <a href="#form-signup">
+                            <Button className="btn btn-primary">Start Measuring Your Community</Button>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -311,25 +309,25 @@ export const MainPage = () => {
             <section className="section" id="faq">
                 <div className="container">
                     <div className="section-title">
-                        <h2>Frequently Asked Questions</h2>
+                        <H2>Frequently Asked Questions</H2>
                     </div>
 
                     <div className="faq-grid">
                         <div className={`faq-item ${activeFaq === 0 ? 'active' : ''}`}>
-                            <button className="faq-question" onClick={() => toggleFaq(0)}>
+                            <Button className="faq-question" onClick={() => toggleFaq(0)}>
                                 How do I integrate my Discourse community?
-                            </button>
+                            </Button>
                             <div className="faq-answer">
-                                <p>It's easy! Simply connect your community to our platform by providing the url of your discourse website. If your community is not public, you will need to provide an API key also.</p>
+                                <Paragraph>It's easy! Simply connect your community to our platform by providing the url of your discourse website. If your community is not public, you will need to provide an API key also.</Paragraph>
                             </div>
                         </div>
 
                         <div className={`faq-item ${activeFaq === 1 ? 'active' : ''}`}>
-                            <button className="faq-question" onClick={() => toggleFaq(1)}>
+                            <Button className="faq-question" onClick={() => toggleFaq(1)}>
                                 What type of metrics do you track?
-                            </button>
+                            </Button>
                             <div className="faq-answer">
-                                <p>We provide insights into 50+ metrics. Everything you need to manage your community effectively. Each metric also has a benchmark value so you can compare your effort.</p>
+                                <Paragraph>We provide insights into 50+ metrics. Everything you need to manage your community effectively. Each metric also has a benchmark value so you can compare your effort.</Paragraph>
                             </div>
                         </div>
                     </div>
@@ -337,9 +335,12 @@ export const MainPage = () => {
             </section>
 
             {/* form */}
-            <section className='section section-form'>
-
-                <Signup />
+            <section className="py-16 bg-gray-50" id="form-signup">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-2xl mx-auto bg-black rounded-xl shadow-sm p-8 md:p-12 border border-gray-100">
+                        <Signup />
+                    </div>
+                </div>
             </section>
 
             {/* Footer */}
@@ -348,26 +349,25 @@ export const MainPage = () => {
                     <div className="footer-content">
                         <div className="footer-logo">
                             <a href="#" className="logo">Discourse<span>Analytics</span></a>
-                            <p>Data-driven insights for your community</p>
+                            <Paragraph>Data-driven insights for your community</Paragraph>
                         </div>
 
                         <div className="footer-links">
                             <div className="links-column">
-                                <h4>Product</h4>
+                                <H4>Product</H4>
                                 <a href="#how-it-works">Features</a>
                                 <a href="#metrics">Metrics</a>
-                                <a href="#reports">Reports</a>
                             </div>
 
                             <div className="links-column">
-                                <h4>Resources</h4>
+                                <H4>Resources</H4>
                                 <a href="#faq">FAQ</a>
                                 <a href="#">Documentation</a>
                                 <a href="#">Blog</a>
                             </div>
 
                             <div className="links-column">
-                                <h4>Company</h4>
+                                <H4>Company</H4>
                                 <a href="#">About Us</a>
                                 <a href="#">Contact</a>
                                 <a href="#">Privacy Policy</a>
@@ -376,8 +376,8 @@ export const MainPage = () => {
                     </div>
 
                     <div className="footer-bottom">
-                        <p>&copy; 2023 Discourse Analytics. All rights reserved.</p>
-                        <p>Contact: nicolas.chabanovsky@gmail.com</p>
+                        <Paragraph>&copy; 2023 Discourse Analytics. All rights reserved.</Paragraph>
+                        <Paragraph>Contact: nicolas.chabanovsky@gmail.com</Paragraph>
                     </div>
                 </div>
             </footer>
