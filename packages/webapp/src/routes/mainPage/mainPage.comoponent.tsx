@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Plug, BarChart2Icon, RocketIcon, BarChart2, Rocket, UsersIcon, SproutIcon, FireExtinguisherIcon, FireExtinguisher, FlameIcon } from 'lucide-react'
+import { Plug, BarChart2Icon, RocketIcon, BarChart2, Rocket, UsersIcon, SproutIcon, FireExtinguisherIcon, FireExtinguisher, FlameIcon, Menu } from 'lucide-react'
 import './mainPage.css';
 import Signup from '../auth/signup';
 import { Button } from '@sb/webapp-core/components/buttons';
@@ -8,6 +8,7 @@ import { FormattedMessage } from 'react-intl';
 import { PageHeadline } from '@sb/webapp-core/components/pageHeadline';
 import { Card, CardContent, CardHeader, CardTitle } from '@sb/webapp-core/components/cards';
 import { H2, H4, Paragraph } from '@sb/webapp-core/components/typography';
+import { Hero } from '../../shared/components/layout/hero/hero.component';
 
 export const MainPage = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,9 +28,9 @@ export const MainPage = () => {
     };
 
     return (
-        <div className="main-page-div">
+        <div className="main-page-div -mt-10">
             {/* Header */}
-            <header className={`header-main-page ${isScrolled ? 'scrolled' : ''}`}>
+            {/* <header className={`header-main-page ${isScrolled ? 'scrolled' : ''}`}>
                 <div className="container-main-page header-children">
                     <Link to="/main-page" className="logo">Discourse<span>Analytics</span></Link>
 
@@ -56,37 +57,10 @@ export const MainPage = () => {
                         }
                     </Button>
                 </div>
-            </header>
+            </header> */}
 
             {/* Hero Section */}
-            <section className="hero section-gray">
-                <div className="container">
-                    <div className="hero-content">
-                        <PageHeadline
-                            header={
-                                <FormattedMessage defaultMessage="Measure, Improve, and Grow Your Discourse Community" id="Auth / Profile details / Personal data header" />
-                            }
-                            subheader={
-                                <FormattedMessage
-                                    defaultMessage="Leverage the power of data to increase engagement, boost retention, and drive sustainable growth for your Discourse community."
-                                    id="Auth / Profile details / Personal data label"
-                                />
-                            }
-                        />
-                        <div className="hero-buttons">
-                            <a href="#form-signup">
-                                <Button className="btn btn-primary">Start Your Free Trial</Button>
-                            </a>
-                            <Button className="btn btn-outline">See Demo</Button>
-                        </div>
-                    </div>
-                    <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcA5h3CaalR-OLgFQFrpO90jY56fdnsMqUSg&s"
-                        alt="Community Analytics Dashboard"
-                        className="hero-image"
-                    />
-                </div>
-            </section>
+            <Hero />
 
             {/* How It Works */}
             <section className="py-16 bg-gray-50" id="how-it-works">
