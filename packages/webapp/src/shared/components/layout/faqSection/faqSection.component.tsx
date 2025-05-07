@@ -40,7 +40,7 @@ export const FaqSection = () => {
                                 }`}
                         >
                             <Button
-                                className="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 focus:outline-none"
+                                className="w-full flex justify-between items-center p-10 text-left hover:bg-gray-50 focus:outline-none"
                                 onClick={() => toggleFaq(index)}
                                 aria-expanded={activeFaq === index}
                                 aria-controls={`faq-answer-${index}`}
