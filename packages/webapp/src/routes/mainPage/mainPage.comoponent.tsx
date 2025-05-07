@@ -9,55 +9,19 @@ import { PageHeadline } from '@sb/webapp-core/components/pageHeadline';
 import { Card, CardContent, CardHeader, CardTitle } from '@sb/webapp-core/components/cards';
 import { H2, H4, Paragraph } from '@sb/webapp-core/components/typography';
 import { Hero } from '../../shared/components/layout/hero/hero.component';
+import { PublicHeader } from '../../shared/components/layout/publicHeader/publicHeader.component';
 
 export const MainPage = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeFaq, setActiveFaq] = useState(null);
-    const [isScrolled, setIsScrolled] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
 
     const toggleFaq = (index: any) => {
         setActiveFaq(activeFaq === index ? null : index);
     };
 
     return (
-        <div className="main-page-div -mt-10">
+        <div className="main-page-div -mt-[105px]">
             {/* Header */}
-            {/* <header className={`header-main-page ${isScrolled ? 'scrolled' : ''}`}>
-                <div className="container-main-page header-children">
-                    <Link to="/main-page" className="logo">Discourse<span>Analytics</span></Link>
-
-                    <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
-                        <a href="#how-it-works" onClick={() => setIsMenuOpen(false)}>How It Works</a>
-                        <a href="#metrics" onClick={() => setIsMenuOpen(false)}>Metrics</a>
-                        <a href="#faq" onClick={() => setIsMenuOpen(false)}>FAQ</a>
-                        <a href="#form-signup">
-                            <Button className="btn btn-outline mobile-nav-btn" onClick={() => setIsMenuOpen(false)}>Get Started</Button>
-                        </a>
-                    </nav>
-
-                    <Button
-                        className="mobile-menu-btn"
-                        onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        aria-label="Toggle menu"
-                    >
-                        {isMenuOpen ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M6 6l12 12M6 18L18 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                        </svg>
-                            :
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>
-                        }
-                    </Button>
-                </div>
-            </header> */}
+            <PublicHeader />
 
             {/* Hero Section */}
             <Hero />

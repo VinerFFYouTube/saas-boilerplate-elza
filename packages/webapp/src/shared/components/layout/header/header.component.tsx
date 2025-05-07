@@ -48,22 +48,6 @@ export const Header = (props: HeaderProps) => {
           </div>
         )}
 
-        {!isSidebarAvailable && (
-          <div
-            className="block w-6 cursor-pointer justify-self-start lg:hidden"
-            role="button"
-            tabIndex={0}
-            onClick={() => setSideMenuOpen(true)}
-            aria-expanded={isSideMenuOpen}
-            aria-label={intl.formatMessage({
-              id: 'Header / Home menu link aria label',
-              defaultMessage: 'Open menu',
-            })}
-          >
-            <Menu />
-          </div>
-        )}
-
         {isLoggedIn && <TenantSwitch />}
 
         <div className="flex-1"></div>
