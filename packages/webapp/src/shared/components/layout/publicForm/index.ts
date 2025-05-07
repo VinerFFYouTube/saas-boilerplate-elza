@@ -1,0 +1,1 @@
+import { PublicForm } from './publicForm.component';

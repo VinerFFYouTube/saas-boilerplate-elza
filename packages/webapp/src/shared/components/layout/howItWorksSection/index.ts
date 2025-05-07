@@ -1,0 +1,1 @@
+import { HowItWorksSection } from './howItWorksSection.component';

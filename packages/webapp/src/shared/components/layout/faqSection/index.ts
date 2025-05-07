@@ -1,0 +1,1 @@
+import { FaqSection } from './faqSection.component';
