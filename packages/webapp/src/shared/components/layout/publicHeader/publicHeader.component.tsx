@@ -1,10 +1,13 @@
-import { Button } from "@sb/webapp-core/components/buttons";
+import { Button, Link } from "@sb/webapp-core/components/buttons";
+import { NavigationHeader } from "@sb/webapp-core/components/navigation"
+import { useGenerateLocalePath } from "@sb/webapp-core/hooks";
+import { RoutesConfig } from "../../../../app/config/routes";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 export const PublicHeader = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const generateLocalePath = useGenerateLocalePath()
 
     useEffect(() => {
         const handleScroll = () => {
@@ -17,20 +20,11 @@ export const PublicHeader = () => {
     return (
         <header className={`fixed w-full z-50 bg-white`}>
             <div className="container mx-auto h-[65px] px-4 flex justify-between items-center">
-                <Link to="/main-page" className="text-2xl font-bold text-blue-600">
+                <Link to={generateLocalePath(RoutesConfig.mainPage)} className="text-2xl font-bold text-blue-600">
                     Discourse<span className="text-gray-800">Analytics</span>
                 </Link>
 
-                <nav className="hidden md:flex space-x-8 items-center">
-                    <a href="#how-it-works" className="text-gray-700 hover:text-blue-600 transition">How It Works</a>
-                    <a href="#metrics" className="text-gray-700 hover:text-blue-600 transition">Metrics</a>
-                    <a href="#faq" className="text-gray-700 hover:text-blue-600 transition">FAQ</a>
-                    <a href="#form-signup">
-                        <Button className="ml-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-md hover:bg-blue-600 hover:text-white transition">
-                            Get Started
-                        </Button>
-                    </a>
-                </nav>
+                <NavigationHeader/>
 
                 <Button
                     className="md:hidden focus:outline-none"

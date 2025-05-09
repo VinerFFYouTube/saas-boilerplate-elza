@@ -1,6 +1,10 @@
+import { Link } from "@sb/webapp-core/components/buttons";
 import { H4, Paragraph } from "@sb/webapp-core/components/typography";
+import { useGenerateLocalePath } from "@sb/webapp-core/hooks";
+import { RoutesConfig } from "../../../../app/config/routes";
 
 export const PublicFooter = () => {
+    const generateLocalePath = useGenerateLocalePath()
     return (
         <footer className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
             <div className="max-w-7xl mx-auto">
@@ -8,9 +12,9 @@ export const PublicFooter = () => {
                 <div className="flex flex-col md:flex-row justify-between gap-8 mb-12">
                     {/* Logo Section */}
                     <div className="max-w-xs">
-                        <a href="#" className="text-2xl sm:text-3xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
-                            Discourse<span className="text-gray-900">Analytics</span>
-                        </a>
+                        <Link to={generateLocalePath(RoutesConfig.mainPage)} className="text-2xl font-bold text-blue-600">
+                            Discourse<span className="text-gray-800">Analytics</span>
+                        </Link>
                         <Paragraph className="mt-4 text-gray-600">
                             Data-driven insights for your community
                         </Paragraph>
