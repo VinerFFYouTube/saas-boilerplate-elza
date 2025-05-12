@@ -5,7 +5,7 @@ import { FormattedMessage } from "react-intl"
 
 export const Hero = () => {
     return (
-        <section className="bg-gray-100 py-[100px] mt-[65px] md:py-20">
+        <section className="bg-background py-[100px] mt-[65px] md:py-20">
             <div className="container mx-auto px-4 flex flex-col items-center justify-center gap-8">
                 <div className="flex flex-col items-center text-center max-w-2xl">
                     <PageHeadline
@@ -24,11 +24,11 @@ export const Hero = () => {
                     />
                     <div className="mt-6 flex flex-col sm:flex-row gap-4">
                         <a href="#form-signup">
-                            <Button className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
+                            <Button className="px-4 py-2 rounded-none border transition-colors bg-white text-black border-black hover:bg-black hover:text-white dark:bg-black dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black">
                                 Start Your Free Trial
                             </Button>
                         </a>
-                        <Button className="px-6 py-3 border border-gray-600 rounded hover:bg-gray-200 transition-colors">
+                        <Button className="px-4 py-2 rounded-none border transition-colors bg-white text-black border-black hover:bg-black hover:text-white dark:bg-black dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black">
                             See Demo
                         </Button>
                     </div>

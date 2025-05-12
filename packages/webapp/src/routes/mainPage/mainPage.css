@@ -1,16 +1,6 @@
-/* Base Styles */
+
 .main-page-div {
-  --primary-color: #4361ee;
-  --primary-dark: #3a56d4;
-  --text-color: #8a8ca7;
-  --text-light: #8d99ae;
-  --bg-gray: #e6e4e4;
-  --white: #ffffff;
-  --transition: all 0.3s ease;
-  
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
   overflow-x: hidden;
 }
 

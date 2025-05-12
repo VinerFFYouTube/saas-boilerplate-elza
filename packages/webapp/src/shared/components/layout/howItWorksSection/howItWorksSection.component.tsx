@@ -8,7 +8,7 @@ import { Button } from "@sb/webapp-core/components/buttons"
 
 export const HowItWorksSection = () => {
     return (
-        <section className="py-16 bg-gray-50" id="how-it-works">
+        <section className="py-16 bg-background" id="how-it-works">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
                     <PageHeadline
@@ -99,7 +99,7 @@ export const HowItWorksSection = () => {
 
                 <div className="text-center">
                     <a href="#form-signup">
-                        <Button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition-colors">
+                        <Button className="px-4 py-2 rounded-none border transition-colors bg-white text-black border-black hover:bg-black hover:text-white dark:bg-black dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black">
                             <FormattedMessage
                                 defaultMessage="Start Analyzing Your Community"
                                 id="howItWorks.cta"

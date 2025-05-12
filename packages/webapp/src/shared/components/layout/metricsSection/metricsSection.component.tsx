@@ -6,7 +6,7 @@ import { BarChart2Icon, UsersIcon, SproutIcon, FlameIcon } from 'lucide-react'
 
 export const MetricsSection = () => {
     return (
-        <section className="py-16 md:py-24 bg-gray-100" id="metrics">
+        <section className="py-16 md:py-24 bg-background" id="metrics">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Title */}
                 <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
@@ -116,7 +116,7 @@ export const MetricsSection = () => {
                 {/* CTA Button */}
                 <div className="text-center">
                     <a href="#form-signup">
-                        <Button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md transition-colors duration-300">
+                        <Button className="px-4 py-2 rounded-none border transition-colors bg-white text-black border-black hover:bg-black hover:text-white dark:bg-black dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black">
                             <FormattedMessage
                                 defaultMessage="Start Measuring Your Community"
                                 id="metrics.cta"

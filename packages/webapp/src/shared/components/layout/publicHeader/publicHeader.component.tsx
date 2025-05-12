@@ -3,10 +3,13 @@ import { NavigationHeader } from "@sb/webapp-core/components/navigation"
 import { useGenerateLocalePath } from "@sb/webapp-core/hooks";
 import { RoutesConfig } from "../../../../app/config/routes";
 import { useEffect, useState } from "react";
+import { useTheme } from '@sb/webapp-core/hooks/useTheme/useTheme';
+import { Sun } from 'lucide-react';
 
 export const PublicHeader = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const { toggleTheme } = useTheme();
     const generateLocalePath = useGenerateLocalePath()
 
     useEffect(() => {
@@ -18,13 +21,16 @@ export const PublicHeader = () => {
     }, []);
 
     return (
-        <header className={`fixed w-full z-50 bg-white`}>
+        <header className={`fixed w-full z-50 bg-background`}>
             <div className="container mx-auto h-[65px] px-4 flex justify-between items-center">
-                <Link to={generateLocalePath(RoutesConfig.mainPage)} className="text-2xl font-bold text-blue-600">
-                    Discourse<span className="text-gray-800">Analytics</span>
+                <Link to={generateLocalePath(RoutesConfig.mainPage)} className="text-2xl font-bold text-foreground">
+                    DiscourseAnalytics
                 </Link>
 
-                <NavigationHeader/>
+                <NavigationHeader />
+                <Button variant="ghost" onClick={() => toggleTheme()} className="h-10 w-10 rounded-full px-0">
+                    <Sun />
+                </Button>
 
                 <Button
                     className="md:hidden focus:outline-none"
@@ -42,7 +48,7 @@ export const PublicHeader = () => {
                     )}
                 </Button>
 
-                <div className={`md:hidden fixed inset-0 bg-white z-40 transition-all duration-300 ease-in-out transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                <div className={`md:hidden fixed inset-0 bg-background z-40 transition-all duration-300 ease-in-out transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                     <Button
                         className="absolute top-4 right-4 p-2 focus:outline-none"
                         onClick={() => setIsMenuOpen(false)}
@@ -54,32 +60,31 @@ export const PublicHeader = () => {
                     </Button>
 
                     <div className="flex flex-col h-full justify-center items-center space-y-8">
-                        <a
-                            href="#how-it-works"
-                            className="text-2xl text-gray-700 hover:text-blue-600"
+                        <Link
+                            to="#how-it-works"
                             onClick={() => setIsMenuOpen(false)}
                         >
-                            How It Works
-                        </a>
-                        <a
-                            href="#metrics"
-                            className="text-2xl text-gray-700 hover:text-blue-600"
+                            <span className="text-foreground">How It Works</span>
+                        </Link>
+                        <Link
+                            to="#metrics"
+                            className="text-foreground"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Metrics
-                        </a>
-                        <a
-                            href="#faq"
-                            className="text-2xl text-gray-700 hover:text-blue-600"
+                        </Link>
+                        <Link
+                            to="#faq"
+                            className="text-foreground"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             FAQ
-                        </a>
+                        </Link>
                         <a
                             href="#form-signup"
                             onClick={() => setIsMenuOpen(false)}
                         >
-                            <button className="px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-md hover:bg-blue-600 hover:text-white transition text-xl">
+                            <button className="px-4 py-2 rounded-none border transition-colors bg-white text-black border-black hover:bg-black hover:text-white dark:bg-black dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black">
                                 Get Started
                             </button>
                         </a>
