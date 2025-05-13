@@ -65,7 +65,7 @@ export const HowItWorksSection = () => {
                         </CardHeader>
                         <CardContent>
                             <Paragraph className="text-gray-600 mb-4">
-                                Get customized, data-driven reports each month with insights on engagement and performance.
+                                Receive customized, data-driven reports each month with insights on engagement, community performance, user retention and many more.
                             </Paragraph>
                             <div className="text-blue-500 mt-4">
                                 <BarChart2 className="w-6 h-6" />
@@ -87,7 +87,7 @@ export const HowItWorksSection = () => {
                         </CardHeader>
                         <CardContent>
                             <Paragraph className="text-gray-600 mb-4">
-                                Leverage the data to make informed decisions and achieve sustainable growth.
+                                Leverage the data to make informed decisions, improve community engagement, and achieve sustainable growth.
                             </Paragraph>
                             <div className="text-blue-500 mt-4">
                                 <Rocket className="w-6 h-6" />

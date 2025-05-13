@@ -13,11 +13,11 @@ export const FaqSection = () => {
     const faqs = [
         {
             question: "How do I integrate my Discourse community?",
-            answer: "It's easy! Simply connect your community to our platform by providing the url of your discourse website. If your community is not public, you will need to provide an API key also."
+            answer: "It’s easy! Simply connect your community to our platform by providing the url of your discourse website. If your community is not public, you will need to provide an API key also."
         },
         {
             question: "What type of metrics do you track?",
-            answer: "We provide insights into 50+ metrics. Everything you need to manage your community effectively. Each metric also has a benchmark value so you can compare your effort."
+            answer: "We provide insights into {__NUMBER__FROM_DB__} metrics. Everything you need to manage your community effectively. Each metric also has a benchmark value so you can compare your effort. If you need some other metrics, we are happy to add them for you."
         }
     ];
 

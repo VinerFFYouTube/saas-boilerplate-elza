@@ -1,0 +1,1 @@
+import { TestimonialsSection } from './testimonialsSection.component';

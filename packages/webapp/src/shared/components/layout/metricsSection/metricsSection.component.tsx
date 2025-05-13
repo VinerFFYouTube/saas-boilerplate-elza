@@ -1,4 +1,4 @@
-import { Button } from "@sb/webapp-core/components/buttons"
+import { Button, Link } from "@sb/webapp-core/components/buttons"
 import { Card, CardContent, CardHeader, CardTitle } from "@sb/webapp-core/components/cards"
 import { PageHeadline } from "@sb/webapp-core/components/pageHeadline"
 import { FormattedMessage } from "react-intl"
@@ -13,13 +13,13 @@ export const MetricsSection = () => {
                     <PageHeadline
                         header={
                             <FormattedMessage
-                                defaultMessage="Improve Your Community With Comprehensive Metrics"
+                                defaultMessage="Improve Your Community With Comprehensive Metrics and Industry Benchmarks"
                                 id='Auth / Profile details / Personal data header'
                             />
                         }
                         subheader={
                             <FormattedMessage
-                                defaultMessage="Track what matters most with metrics that cover all aspects of your community's health and performance."
+                                defaultMessage="Track what matters most with metrics that cover all aspects of your community’s health and performance and compare them to the industry benchmarks."
                                 id='Auth / Profile details / Personal data label'
                             />
                         }
@@ -42,10 +42,18 @@ export const MetricsSection = () => {
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="p-6 pt-0 text-center text-gray-600">
-                            <FormattedMessage
-                                defaultMessage='Measure how actively your members participate in discussions.'
-                                id='integration.header'
-                            />
+                            <div>
+                                <FormattedMessage
+                                    defaultMessage='Measure how actively your members participate in discussions.'
+                                    id='integration.header'
+                                />
+                            </div>
+                            <Link href="#" className="text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors">
+                                <FormattedMessage
+                                    defaultMessage='View details'
+                                    id='metrics.viewDetails'
+                                />
+                            </Link>
                         </CardContent>
                     </Card>
 
@@ -63,10 +71,18 @@ export const MetricsSection = () => {
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="p-6 pt-0 text-center text-gray-600">
-                            <FormattedMessage
-                                defaultMessage='Track how many members return to your community over time.'
-                                id='integration.header'
-                            />
+                            <div>
+                                <FormattedMessage
+                                    defaultMessage='Track how many members return to your community over time.'
+                                    id='integration.header'
+                                />
+                            </div>
+                            <Link href="#" className="text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors">
+                                <FormattedMessage
+                                    defaultMessage='View details'
+                                    id='metrics.viewDetails'
+                                />
+                            </Link>
                         </CardContent>
                     </Card>
 
@@ -84,10 +100,18 @@ export const MetricsSection = () => {
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="p-6 pt-0 text-center text-gray-600">
-                            <FormattedMessage
-                                defaultMessage='Monitor how quickly your community is expanding.'
-                                id='integration.header'
-                            />
+                            <div>
+                                <FormattedMessage
+                                    defaultMessage='Monitor how quickly your community is expanding.'
+                                    id='integration.header'
+                                />
+                            </div>
+                            <Link href="#" className="text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors">
+                                <FormattedMessage
+                                    defaultMessage='View details'
+                                    id='metrics.viewDetails'
+                                />
+                            </Link>
                         </CardContent>
                     </Card>
 
@@ -105,10 +129,18 @@ export const MetricsSection = () => {
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="p-6 pt-0 text-center text-gray-600">
-                            <FormattedMessage
-                                defaultMessage='See the overall participation trends in your community.'
-                                id='integration.header'
-                            />
+                            <div>
+                                <FormattedMessage
+                                    defaultMessage='See the overall participation trends in your community.'
+                                    id='integration.header'
+                                />
+                            </div>
+                            <Link href="#" className="text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors">
+                                <FormattedMessage
+                                    defaultMessage='View details'
+                                    id='metrics.viewDetails'
+                                />
+                            </Link>
                         </CardContent>
                     </Card>
                 </div>

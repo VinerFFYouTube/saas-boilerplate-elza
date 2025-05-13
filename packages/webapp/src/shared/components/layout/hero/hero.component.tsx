@@ -28,9 +28,6 @@ export const Hero = () => {
                                 Start Your Free Trial
                             </Button>
                         </a>
-                        <Button className="px-4 py-2 rounded-none border transition-colors bg-white text-black border-black hover:bg-black hover:text-white dark:bg-black dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black">
-                            See Demo
-                        </Button>
                     </div>
                 </div>
                 <div className="flex justify-center max-w-xl w-full">

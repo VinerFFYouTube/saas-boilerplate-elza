@@ -60,26 +60,26 @@ export const PublicHeader = () => {
                     </Button>
 
                     <div className="flex flex-col h-full justify-center items-center space-y-8">
-                        <Link
-                            to="#how-it-works"
+                        <a
+                            href="#how-it-works"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             <span className="text-foreground">How It Works</span>
-                        </Link>
-                        <Link
-                            to="#metrics"
+                        </a>
+                        <a
+                            href="#metrics"
                             className="text-foreground"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Metrics
-                        </Link>
-                        <Link
-                            to="#faq"
+                        </a>
+                        <a
+                            href="#faq"
                             className="text-foreground"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             FAQ
-                        </Link>
+                        </a>
                         <a
                             href="#form-signup"
                             onClick={() => setIsMenuOpen(false)}
