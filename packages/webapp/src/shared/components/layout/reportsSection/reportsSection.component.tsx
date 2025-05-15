@@ -2,7 +2,7 @@ import { Button, Link } from "@sb/webapp-core/components/buttons"
 import { Card, CardContent, CardHeader, CardTitle } from "@sb/webapp-core/components/cards"
 import { PageHeadline } from "@sb/webapp-core/components/pageHeadline"
 import { FormattedMessage } from "react-intl"
-import { FileTextIcon, BarChartIcon, TrendingUpIcon, UsersIcon, MessageSquareIcon, ClockIcon, AwardIcon } from 'lucide-react'
+import { FileTextIcon, BarChartIcon, TrendingUpIcon, UsersIcon, MessageSquareIcon, ClockIcon, AwardIcon, ArrowRightIcon } from 'lucide-react'
 
 export const ReportsSection = () => {
     const reports = [
@@ -68,12 +68,12 @@ export const ReportsSection = () => {
                     {reports.map((report) => (
                         <Card
                             key={report.id}
-                            className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-blue-200 dark:hover:border-blue-800 h-full flex flex-col"
+                            className="bg-[#fafafa] rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-black h-full flex flex-col"
                         >
                             <Link href={`/reports/${report.id}`} className="flex flex-col h-full">
                                 <CardHeader className="p-6 pb-0">
                                     <div className="flex items-center mb-4">
-                                        <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 mr-4">
+                                        <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-black text-white mr-4">
                                             {report.icon}
                                         </div>
                                         <CardTitle className="text-lg font-semibold text-gray-900">
@@ -92,14 +92,12 @@ export const ReportsSection = () => {
                                         />
                                     </p>
                                     <div className="mt-auto">
-                                        <div className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm font-medium transition-colors">
+                                        <div className="inline-flex items-center text-black text-sm font-medium transition-colors">
                                             <FormattedMessage
                                                 defaultMessage="View sample report"
                                                 id="reports.viewSample"
                                             />
-                                            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                            </svg>
+                                            <ArrowRightIcon />
                                         </div>
                                     </div>
                                 </CardContent>
@@ -111,7 +109,7 @@ export const ReportsSection = () => {
                 <div className="text-center">
                     <Link href="#form-signup">
                         <Button
-                            className="px-8 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white transition-colors shadow-sm hover:shadow-md"
+                            className="px-4 py-2 rounded-none border transition-colors bg-white text-black border-black hover:bg-black hover:text-white dark:bg-black dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
                         >
                             <FormattedMessage
                                 defaultMessage="Start Getting Reports"

@@ -6,7 +6,7 @@ import { BarChart2Icon, UsersIcon, SproutIcon, FlameIcon } from 'lucide-react'
 
 export const MetricsSection = () => {
     return (
-        <section className="py-16 md:py-24 bg-background" id="metrics">
+        <section className="py-16 md:py-24 bg-[#e0e0e0] dark:bg-[#2c2c2c]" id="metrics">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Title */}
                 <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
@@ -29,9 +29,9 @@ export const MetricsSection = () => {
                 {/* Metrics Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 md:mb-16">
                     {/* Engagement Rate Card */}
-                    <Card className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-blue-100">
+                    <Card className="bg-[#fafafa] rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-black">
                         <CardHeader className="flex flex-col items-center text-center p-6 pb-0">
-                            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-50 text-blue-600 mb-4">
+                            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-black text-white mb-4">
                                 <UsersIcon className="w-5 h-5" />
                             </div>
                             <CardTitle className="text-lg font-semibold text-gray-900">
@@ -48,7 +48,7 @@ export const MetricsSection = () => {
                                     id='integration.header'
                                 />
                             </div>
-                            <Link href="#" className="text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors">
+                            <Link href="#" className="text-black text-sm font-medium transition-colors">
                                 <FormattedMessage
                                     defaultMessage='View details'
                                     id='metrics.viewDetails'
@@ -58,9 +58,9 @@ export const MetricsSection = () => {
                     </Card>
 
                     {/* User Retention Card */}
-                    <Card className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-blue-100">
+                    <Card className="bg-[#fafafa] rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-black">
                         <CardHeader className="flex flex-col items-center text-center p-6 pb-0">
-                            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-50 text-blue-600 mb-4">
+                            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-black text-white mb-4">
                                 <BarChart2Icon className="w-5 h-5" />
                             </div>
                             <CardTitle className="text-lg font-semibold text-gray-900">
@@ -77,7 +77,7 @@ export const MetricsSection = () => {
                                     id='integration.header'
                                 />
                             </div>
-                            <Link href="#" className="text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors">
+                            <Link href="#" className="text-black text-sm font-medium transition-colors">
                                 <FormattedMessage
                                     defaultMessage='View details'
                                     id='metrics.viewDetails'
@@ -87,9 +87,9 @@ export const MetricsSection = () => {
                     </Card>
 
                     {/* Growth Rate Card */}
-                    <Card className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-blue-100">
+                    <Card className="bg-[#fafafa] rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-black">
                         <CardHeader className="flex flex-col items-center text-center p-6 pb-0">
-                            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-50 text-blue-600 mb-4">
+                            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-black text-white mb-4">
                                 <SproutIcon className="w-5 h-5" />
                             </div>
                             <CardTitle className="text-lg font-semibold text-gray-900">
@@ -106,7 +106,7 @@ export const MetricsSection = () => {
                                     id='integration.header'
                                 />
                             </div>
-                            <Link href="#" className="text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors">
+                            <Link href="#" className="text-black text-sm font-medium transition-colors">
                                 <FormattedMessage
                                     defaultMessage='View details'
                                     id='metrics.viewDetails'
@@ -116,9 +116,9 @@ export const MetricsSection = () => {
                     </Card>
 
                     {/* Activity Level Card */}
-                    <Card className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-blue-100">
+                    <Card className="bg-[#fafafa] rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-black">
                         <CardHeader className="flex flex-col items-center text-center p-6 pb-0">
-                            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-50 text-blue-600 mb-4">
+                            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-black text-white mb-4">
                                 <FlameIcon className="w-5 h-5" />
                             </div>
                             <CardTitle className="text-lg font-semibold text-gray-900">
@@ -135,7 +135,7 @@ export const MetricsSection = () => {
                                     id='integration.header'
                                 />
                             </div>
-                            <Link href="#" className="text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors">
+                            <Link href="#" className="text-black text-sm font-medium transition-colors">
                                 <FormattedMessage
                                     defaultMessage='View details'
                                     id='metrics.viewDetails'

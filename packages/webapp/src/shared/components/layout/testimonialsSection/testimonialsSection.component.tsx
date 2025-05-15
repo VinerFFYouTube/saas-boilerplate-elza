@@ -69,7 +69,7 @@ export const TestimonialsSection = () => {
     }
 
     return (
-        <section className="py-16 md:py-24 bg-background" id="testimonials">
+        <section className="py-16 md:py-24 bg-[#e0e0e0] dark:bg-[#2c2c2c]" id="testimonials">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
                     <FormattedMessage
@@ -82,18 +82,18 @@ export const TestimonialsSection = () => {
                 <div className="relative max-w-4xl mx-auto">
                     <Button
                         onClick={prevTestimonial}
-                        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 p-2 rounded-full bg-background text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors z-10"
+                        className="absolute left-10 bottom-[-35px] md:left-0 md:bottom-1/3 -translate-y-1/2 -translate-x-12 p-2 rounded-full bg-background text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                         aria-label="Previous testimonial"
                     >
-                        <ChevronLeftIcon className="w-6 h-6" />
+                        <ChevronLeftIcon className="w-6 md:h-6" />
                     </Button>
 
                     <Button
                         onClick={nextTestimonial}
-                        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 p-2 rounded-full bg-background text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors z-10"
+                        className="absolute right-10 bottom-[-35px] md:right-0 md:bottom-1/3 -translate-y-1/2 translate-x-12 p-2 rounded-full bg-background text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                         aria-label="Next testimonial"
                     >
-                        <ChevronRightIcon className="w-6 h-6" />
+                        <ChevronRightIcon className="w-6 md:h-6" />
                     </Button>
 
                     <div className="relative overflow-hidden">
@@ -131,7 +131,7 @@ export const TestimonialsSection = () => {
                             <button
                                 key={index}
                                 onClick={() => setCurrentIndex(index)}
-                                className={`w-3 h-3 rounded-full transition-colors ${currentIndex === index ? 'bg-blue-600 dark:bg-blue-400' : 'bg-gray-300 dark:bg-gray-600'}`}
+                                className={`w-3 h-3 rounded-full transition-colors ${currentIndex === index ? 'bg-black' : 'bg-gray-300'}`}
                                 aria-label={`Go to testimonial ${index + 1}`}
                             />
                         ))}

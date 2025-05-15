@@ -8,7 +8,7 @@ import { Button } from "@sb/webapp-core/components/buttons"
 
 export const HowItWorksSection = () => {
     return (
-        <section className="py-16 bg-background" id="how-it-works">
+        <section className="py-16 bg-bacground" id="how-it-works">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
                     <PageHeadline
@@ -28,9 +28,9 @@ export const HowItWorksSection = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                    <Card className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow border-0">
+                    <Card className="bg-[#fafafa] rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow border-0">
                         <CardHeader className="flex items-start mb-4">
-                            <div className="flex-shrink-0 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full w-8 h-8 text-sm font-medium mr-3">
+                            <div className="flex-shrink-0 flex items-center justify-center bg-black text-white rounded-full w-8 h-8 text-sm font-medium mr-3">
                                 1
                             </div>
                             <CardTitle className="text-lg font-semibold text-gray-400">
@@ -44,16 +44,16 @@ export const HowItWorksSection = () => {
                             <Paragraph className="text-gray-600 mb-4">
                                 Integrate your community with one-click to start tracking performance.
                             </Paragraph>
-                            <div className="text-blue-500 mt-4">
+                            <div className="text-black mt-4">
                                 <Plug className="w-6 h-6" />
                             </div>
 
                         </CardContent>
                     </Card>
 
-                    <Card className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow border-0">
+                    <Card className="bg-[#fafafa] rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow border-0">
                         <CardHeader className="flex items-start mb-4">
-                            <div className="flex-shrink-0 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full w-8 h-8 text-sm font-medium mr-3">
+                            <div className="flex-shrink-0 flex items-center justify-center bg-black text-white rounded-full w-8 h-8 text-sm font-medium mr-3">
                                 2
                             </div>
                             <CardTitle className="text-lg font-semibold text-gray-400">
@@ -67,15 +67,15 @@ export const HowItWorksSection = () => {
                             <Paragraph className="text-gray-600 mb-4">
                                 Receive customized, data-driven reports each month with insights on engagement, community performance, user retention and many more.
                             </Paragraph>
-                            <div className="text-blue-500 mt-4">
+                            <div className="text-black mt-4">
                                 <BarChart2 className="w-6 h-6" />
                             </div>
                         </CardContent>
                     </Card>
 
-                    <Card className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow border-0">
+                    <Card className="bg-[#fafafa] rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow border-0">
                         <CardHeader className="flex items-start mb-4">
-                            <div className="flex-shrink-0 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full w-8 h-8 text-sm font-medium mr-3">
+                            <div className="flex-shrink-0 flex items-center justify-center bg-black text-white rounded-full w-8 h-8 text-sm font-medium mr-3">
                                 3
                             </div>
                             <CardTitle className="text-lg font-semibold text-gray-400">
@@ -89,7 +89,7 @@ export const HowItWorksSection = () => {
                             <Paragraph className="text-gray-600 mb-4">
                                 Leverage the data to make informed decisions, improve community engagement, and achieve sustainable growth.
                             </Paragraph>
-                            <div className="text-blue-500 mt-4">
+                            <div className="text-black mt-4">
                                 <Rocket className="w-6 h-6" />
                             </div>
                         </CardContent>

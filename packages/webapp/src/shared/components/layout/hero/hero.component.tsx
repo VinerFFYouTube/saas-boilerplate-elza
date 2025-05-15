@@ -5,7 +5,7 @@ import { FormattedMessage } from "react-intl"
 
 export const Hero = () => {
     return (
-        <section className="bg-background py-[100px] mt-[65px] md:py-20">
+        <section className="bg-[#f5f5f5] dark:bg-[#2c2c2c] py-[100px] mt-[65px] md:py-20">
             <div className="container mx-auto px-4 flex flex-col items-center justify-center gap-8">
                 <div className="flex flex-col items-center text-center max-w-2xl">
                     <PageHeadline
@@ -32,7 +32,7 @@ export const Hero = () => {
                 </div>
                 <div className="flex justify-center max-w-xl w-full">
                     <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcA5h3CaalR-OLgFQFrpO90jY56fdnsMqUSg&s"
+                        src="https://www.appsflyer.com/wp-content/uploads/2024/09/USP_1-1.svg"
                         alt="Community Analytics Dashboard"
                         className="w-full h-auto rounded-lg shadow-md"
                     />
