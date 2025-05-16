@@ -29,19 +29,19 @@ export const MetricsSection = () => {
                 {/* Metrics Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 md:mb-16">
                     {/* Engagement Rate Card */}
-                    <Card className="bg-[#fafafa] rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-black">
+                    <Card className="bg-background rounded-none border border-black dark:border-white">
                         <CardHeader className="flex flex-col items-center text-center p-6 pb-0">
-                            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-black text-white mb-4">
-                                <UsersIcon className="w-5 h-5" />
+                            <div className="flex items-center justify-center text-black dark:text-white mb-4">
+                                <UsersIcon className="w-12 h-12" />
                             </div>
-                            <CardTitle className="text-lg font-semibold text-gray-900">
+                            <CardTitle className="text-lg font-semibold text-gray-900 dark:text-gray-400">
                                 <FormattedMessage
                                     defaultMessage='Engagement Rate'
                                     id='integration.header'
                                 />
                             </CardTitle>
                         </CardHeader>
-                        <CardContent className="p-6 pt-0 text-center text-gray-600">
+                        <CardContent className="p-6 pt-0 text-center text-gray-600 dark:text-gray-500">
                             <div>
                                 <FormattedMessage
                                     defaultMessage='Measure how actively your members participate in discussions.'
@@ -58,19 +58,19 @@ export const MetricsSection = () => {
                     </Card>
 
                     {/* User Retention Card */}
-                    <Card className="bg-[#fafafa] rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-black">
+                    <Card className="bg-background rounded-none border border-black dark:border-white">
                         <CardHeader className="flex flex-col items-center text-center p-6 pb-0">
-                            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-black text-white mb-4">
-                                <BarChart2Icon className="w-5 h-5" />
+                            <div className="flex items-center justify-center text-black dark:text-white mb-4">
+                                <BarChart2Icon className="w-12 h-12" />
                             </div>
-                            <CardTitle className="text-lg font-semibold text-gray-900">
+                            <CardTitle className="text-lg font-semibold text-gray-900 dark:text-gray-400">
                                 <FormattedMessage
                                     defaultMessage='User Retention'
                                     id='integration.header'
                                 />
                             </CardTitle>
                         </CardHeader>
-                        <CardContent className="p-6 pt-0 text-center text-gray-600">
+                        <CardContent className="p-6 pt-0 text-center text-gray-600 dark:text-gray-500">
                             <div>
                                 <FormattedMessage
                                     defaultMessage='Track how many members return to your community over time.'
@@ -87,19 +87,19 @@ export const MetricsSection = () => {
                     </Card>
 
                     {/* Growth Rate Card */}
-                    <Card className="bg-[#fafafa] rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-black">
+                    <Card className="bg-background rounded-none border border-black dark:border-white">
                         <CardHeader className="flex flex-col items-center text-center p-6 pb-0">
-                            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-black text-white mb-4">
-                                <SproutIcon className="w-5 h-5" />
+                            <div className="flex items-center justify-center text-black dark:text-white mb-4">
+                                <SproutIcon className="w-12 h-12" />
                             </div>
-                            <CardTitle className="text-lg font-semibold text-gray-900">
+                            <CardTitle className="text-lg font-semibold text-gray-900 dark:text-gray-400">
                                 <FormattedMessage
                                     defaultMessage='Growth Rate'
                                     id='integration.header'
                                 />
                             </CardTitle>
                         </CardHeader>
-                        <CardContent className="p-6 pt-0 text-center text-gray-600">
+                        <CardContent className="p-6 pt-0 text-center text-gray-600 dark:text-gray-500">
                             <div>
                                 <FormattedMessage
                                     defaultMessage='Monitor how quickly your community is expanding.'
@@ -116,19 +116,19 @@ export const MetricsSection = () => {
                     </Card>
 
                     {/* Activity Level Card */}
-                    <Card className="bg-[#fafafa] rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-black">
+                    <Card className="bg-background rounded-none border border-black dark:border-white">
                         <CardHeader className="flex flex-col items-center text-center p-6 pb-0">
-                            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-black text-white mb-4">
-                                <FlameIcon className="w-5 h-5" />
+                            <div className="flex items-center justify-center text-black dark:text-white mb-4">
+                                <FlameIcon className="w-12 h-12" />
                             </div>
-                            <CardTitle className="text-lg font-semibold text-gray-900">
+                            <CardTitle className="text-lg font-semibold text-gray-900 dark:text-gray-400">
                                 <FormattedMessage
                                     defaultMessage='Activity Level'
                                     id='integration.header'
                                 />
                             </CardTitle>
                         </CardHeader>
-                        <CardContent className="p-6 pt-0 text-center text-gray-600">
+                        <CardContent className="p-6 pt-0 text-center text-gray-600 dark:text-gray-500">
                             <div>
                                 <FormattedMessage
                                     defaultMessage='See the overall participation trends in your community.'

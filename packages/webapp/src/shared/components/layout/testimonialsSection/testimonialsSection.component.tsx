@@ -106,7 +106,7 @@ export const TestimonialsSection = () => {
                                     key={testimonial.id}
                                     className="w-full flex-shrink-0 px-4"
                                 >
-                                    <div className="bg-gray-50 dark:bg-gray-900 p-8 md:p-10 rounded-xl shadow-sm">
+                                    <div className="bg-white dark:bg-black p-8 md:p-10 border border-black dark:border-white">
                                         <blockquote className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8">
                                             "{testimonial.text}"
                                         </blockquote>

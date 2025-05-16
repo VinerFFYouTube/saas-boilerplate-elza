@@ -8,37 +8,37 @@ export const ReportsSection = () => {
     const reports = [
         {
             id: 'engagement',
-            icon: <MessageSquareIcon className="w-5 h-5" />,
+            icon: <MessageSquareIcon className="w-12 h-12" />,
             title: 'Engagement Report',
             description: 'Detailed analysis of member participation and interaction patterns'
         },
         {
             id: 'growth',
-            icon: <TrendingUpIcon className="w-5 h-5" />,
+            icon: <TrendingUpIcon className="w-12 h-12" />,
             title: 'Growth Report',
             description: 'Track new members, retention rates, and community expansion'
         },
         {
             id: 'activity',
-            icon: <ClockIcon className="w-5 h-5" />,
+            icon: <ClockIcon className="w-12 h-12" />,
             title: 'Activity Report',
             description: 'Peak times, most active days, and participation trends'
         },
         {
             id: 'benchmarks',
-            icon: <AwardIcon className="w-5 h-5" />,
+            icon: <AwardIcon className="w-12 h-12" />,
             title: 'Benchmark Report',
             description: 'Compare your metrics against industry standards'
         },
         {
             id: 'demographics',
-            icon: <UsersIcon className="w-5 h-5" />,
+            icon: <UsersIcon className="w-12 h-12" />,
             title: 'Demographics Report',
             description: 'Member location, join dates, and participation frequency'
         },
         {
             id: 'summary',
-            icon: <FileTextIcon className="w-5 h-5" />,
+            icon: <FileTextIcon className="w-12 h-12" />,
             title: 'Executive Summary',
             description: 'High-level overview of all key metrics and insights'
         }
@@ -68,15 +68,15 @@ export const ReportsSection = () => {
                     {reports.map((report) => (
                         <Card
                             key={report.id}
-                            className="bg-[#fafafa] rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-black h-full flex flex-col"
+                            className="bg-background rounded-none border border-[#cfcfcf] dark:border-white h-full flex flex-col"
                         >
                             <Link href={`/reports/${report.id}`} className="flex flex-col h-full">
                                 <CardHeader className="p-6 pb-0">
                                     <div className="flex items-center mb-4">
-                                        <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-black text-white mr-4">
+                                        <div className="flex items-center justify-center text-black dark:text-white mr-4">
                                             {report.icon}
                                         </div>
-                                        <CardTitle className="text-lg font-semibold text-gray-900">
+                                        <CardTitle className="text-lg font-semibold text-gray-900 dark:text-white">
                                             <FormattedMessage
                                                 defaultMessage={report.title}
                                                 id={`reports.${report.id}.title`}
@@ -85,14 +85,14 @@ export const ReportsSection = () => {
                                     </div>
                                 </CardHeader>
                                 <CardContent className="p-6 pt-0 flex-grow">
-                                    <p className="text-gray-600 mb-6">
+                                    <p className="text-gray-600 dark:text-gray-400 mb-6">
                                         <FormattedMessage
                                             defaultMessage={report.description}
                                             id={`reports.${report.id}.description`}
                                         />
                                     </p>
                                     <div className="mt-auto">
-                                        <div className="inline-flex items-center text-black text-sm font-medium transition-colors">
+                                        <div className="inline-flex items-center text-black dark:text-gray-400 text-sm font-medium transition-colors">
                                             <FormattedMessage
                                                 defaultMessage="View sample report"
                                                 id="reports.viewSample"

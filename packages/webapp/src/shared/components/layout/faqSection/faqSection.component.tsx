@@ -36,7 +36,7 @@ export const FaqSection = () => {
                     {faqs.map((faq, index) => (
                         <div
                             key={index}
-                            className={`border border-gray-200 dark:border-gray-700 rounded-none overflow-hidden transition-all duration-300`}
+                            className={`border border-[#cfcfcf] dark:border-white rounded-none overflow-hidden transition-all duration-300`}
                         >
                             <Button
                                 className="w-full flex justify-between items-center p-10 text-left bg-background hover:bg-background/90 dark:hover:bg-background/90"
