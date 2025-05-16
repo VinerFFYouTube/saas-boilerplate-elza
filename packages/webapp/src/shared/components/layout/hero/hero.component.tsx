@@ -1,6 +1,7 @@
 import { Button } from "@sb/webapp-core/components/buttons"
 import { PageHeadline } from "@sb/webapp-core/components/pageHeadline"
 import { FormattedMessage } from "react-intl"
+import graphics from "../../../../images/icons/graphics.jpg"
 
 
 export const Hero = () => {
@@ -32,7 +33,7 @@ export const Hero = () => {
                 </div>
                 <div className="flex justify-center max-w-xl w-full">
                     <img
-                        src="https://www.appsflyer.com/wp-content/uploads/2024/09/USP_1-1.svg"
+                        src={graphics}
                         alt="Community Analytics Dashboard"
                         className="w-full h-auto rounded-lg shadow-md"
                     />
